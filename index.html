@@ -51,7 +51,16 @@
   <meta name="twitter:site" content="@netflix" />
   <!-- Load Inter (closest free alternative to Netflix Sans) -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 
+  #appMountPoint > div > div {
+    margin-top: -80px !important;  /* Adjust -80px to -120px if needed */
+  }
+</style>
 <style>
   /* Override EVERYTHING with Inter – applies to whole page */
   * {
@@ -30750,42 +30759,7 @@
       <div class="basicLayout">
         <div class="">
           <div data-uia="loc" lang="en" dir="ltr">
-            <!-- <style data-emotion="default-ltr-iqcdef-cache-global y493e3">
-              @font-face {
-                font-family: "Netflix Sans Variable";
-                src: url("https://occ.a.nflxso.net/genc/hawkins/5.10.0/font/netflix-sans-core-variable-full.woff2") format("woff2"), local("Helvetica Neue"), local("Segoe UI"), local("Roboto"), local("Ubuntu");
-                unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-017F, U+0181, U+0186, U+0189-018A, U+018E-0192, U+0194, U+0196-0199, U+019D-01A3, U+01AF-01B9, U+01C0-01C3, U+01CD-01DD, U+01E4-01EB, U+01EE-01F0, U+01F4-01F5, U+01F8-01FF, U+0218-021B, U+021E-0220, U+0226-0227, U+022E-022F, U+0232-0233, U+0237, U+0241-0242, U+0244, U+0248-0249, U+024C-024D, U+0250-0251, U+0253-0254, U+0256-0259, U+025B, U+025F, U+0261, U+0263, U+0268-026A, U+0272, U+0275, U+027D, U+0283, U+0289-028B, U+0292, U+0294, U+02B7, U+02B9, U+02BB-02BC, U+02BE-02BF, U+02C6-02CB, U+02D8-02DD, U+0300-0304, U+0306-030D, U+0312, U+0315, U+031B, U+0323, U+0326-0329, U+032D-032E, U+0331, U+0338, U+0344, U+0358, U+0374-0375, U+037E, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE, U+0400-045F, U+0490-0493, U+0496-0497, U+049A-049B, U+04A2-04A3, U+04AE-04B3, U+04B6-04B7, U+04BA-04BB, U+04C0, U+04CF, U+04D4-04D5, U+04D8-04D9, U+04E2-04E3, U+04E8-04E9, U+04EE-04EF, U+058F, U+060B, U+0E3F, U+1DC6-1DC7, U+1E04-1E07, U+1E0C-1E13, U+1E18-1E19, U+1E20-1E25, U+1E28-1E2B, U+1E32-1E37, U+1E3A-1E3F, U+1E42-1E4B, U+1E5A-1E5B, U+1E5E-1E5F, U+1E62-1E63, U+1E6C-1E71, U+1E76-1E77, U+1E7C-1E85, U+1E88-1E89, U+1E92-1E96, U+1E9E, U+1EA0-1EF9, U+2000-200B, U+2010-2027, U+2030-203E, U+2044, U+2070, U+2074-208E, U+20A1-20A4, U+20A6-20AF, U+20B1-20B2, U+20B4-20B5, U+20B8-20BA, U+20BC-20BF, U+2103, U+2105, U+2109, U+2113, U+2116-2117, U+2120-2122, U+2126, U+212E, U+2153-215E, U+2190-2199, U+21A8, U+21B8-21B9, U+21D2, U+21D4, U+21E7, U+2202, U+2206, U+220F, U+2211-2212, U+2215, U+2219-221A, U+221E-2220, U+2229, U+222B, U+2248, U+2260-2261, U+2264-2265, U+2302, U+2310, U+2320-2321, U+2500, U+2502, U+250C, U+2510, U+2514, U+2518, U+251C, U+2524, U+252C, U+2534, U+253C, U+2550-256C, U+2580, U+2584, U+2588, U+258C, U+2590-2593, U+25A0-25A1, U+25AA-25AC, U+25B2-25B3, U+25B6-25B7, U+25BA, U+25BC-25BD, U+25C0-25C1, U+25C4, U+25C6-25CB, U+25CE-25D1, U+25D8-25D9, U+25E2-25E6, U+25EF, U+2605-2606, U+2609, U+260E-260F, U+261C, U+261E, U+263A-263D, U+2640-2642, U+2660-2661, U+2663-266D, U+266F, U+2C64, U+2E3A, U+A78B-A78C, U+A790-A791, U+FB00-FB04, U+FE45-FE46, U+FEFF, U+FFFD;
-                font-weight: 100 900;
-                font-stretch: 50% 125%;
-                font-display: swap;
-              } -->
 
-              @font-face {
-                font-family: "Netflix Sans Debug";
-                src: url("https://occ.a.nflxso.net/genc/hawkins/5.10.0/font/netflix-sans-debug-variable-full.woff2") format("woff2"), local("Helvetica Neue"), local("Segoe UI"), local("Roboto"), local("Ubuntu");
-                unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-017F, U+0181, U+0186, U+0189-018A, U+018E-0192, U+0194, U+0196-0199, U+019D-01A3, U+01AF-01B9, U+01C0-01C3, U+01CD-01DD, U+01E4-01EB, U+01EE-01F0, U+01F4-01F5, U+01F8-01FF, U+0218-021B, U+021E-0220, U+0226-0227, U+022E-022F, U+0232-0233, U+0237, U+0241-0242, U+0244, U+0248-0249, U+024C-024D, U+0250-0251, U+0253-0254, U+0256-0259, U+025B, U+025F, U+0261, U+0263, U+0268-026A, U+0272, U+0275, U+027D, U+0283, U+0289-028B, U+0292, U+0294, U+02B7, U+02B9, U+02BB-02BC, U+02BE-02BF, U+02C6-02CB, U+02D8-02DD, U+0300-0304, U+0306-030D, U+0312, U+0315, U+031B, U+0323, U+0326-0329, U+032D-032E, U+0331, U+0338, U+0344, U+0358, U+0374-0375, U+037E, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03CE, U+0400-045F, U+0490-0493, U+0496-0497, U+049A-049B, U+04A2-04A3, U+04AE-04B3, U+04B6-04B7, U+04BA-04BB, U+04C0, U+04CF, U+04D4-04D5, U+04D8-04D9, U+04E2-04E3, U+04E8-04E9, U+04EE-04EF, U+058F, U+060B, U+0E3F, U+1DC6-1DC7, U+1E04-1E07, U+1E0C-1E13, U+1E18-1E19, U+1E20-1E25, U+1E28-1E2B, U+1E32-1E37, U+1E3A-1E3F, U+1E42-1E4B, U+1E5A-1E5B, U+1E5E-1E5F, U+1E62-1E63, U+1E6C-1E71, U+1E76-1E77, U+1E7C-1E85, U+1E88-1E89, U+1E92-1E96, U+1E9E, U+1EA0-1EF9, U+2000-200B, U+2010-2027, U+2030-203E, U+2044, U+2070, U+2074-208E, U+20A1-20A4, U+20A6-20AF, U+20B1-20B2, U+20B4-20B5, U+20B8-20BA, U+20BC-20BF, U+2103, U+2105, U+2109, U+2113, U+2116-2117, U+2120-2122, U+2126, U+212E, U+2153-215E, U+2190-2199, U+21A8, U+21B8-21B9, U+21D2, U+21D4, U+21E7, U+2202, U+2206, U+220F, U+2211-2212, U+2215, U+2219-221A, U+221E-2220, U+2229, U+222B, U+2248, U+2260-2261, U+2264-2265, U+2302, U+2310, U+2320-2321, U+2500, U+2502, U+250C, U+2510, U+2514, U+2518, U+251C, U+2524, U+252C, U+2534, U+253C, U+2550-256C, U+2580, U+2584, U+2588, U+258C, U+2590-2593, U+25A0-25A1, U+25AA-25AC, U+25B2-25B3, U+25B6-25B7, U+25BA, U+25BC-25BD, U+25C0-25C1, U+25C4, U+25C6-25CB, U+25CE-25D1, U+25D8-25D9, U+25E2-25E6, U+25EF, U+2605-2606, U+2609, U+260E-260F, U+261C, U+261E, U+263A-263D, U+2640-2642, U+2660-2661, U+2663-266D, U+266F, U+2C64, U+2E3A, U+A78B-A78C, U+A790-A791, U+FB00-FB04, U+FE45-FE46, U+FEFF, U+FFFD;
-                font-weight: 100 900;
-                font-stretch: 50% 125%;
-                font-display: swap;
-              }
-
-              @font-face {
-                font-family: "Netflix Sans Variable";
-                src: url("https://occ.a.nflxso.net/genc/hawkins/5.10.0/font/netflix-sans-arabic-variable-subset.woff2") format("woff2"), local("Helvetica Neue"), local("Segoe UI"), local("Roboto"), local("Ubuntu");
-                unicode-range: U+060C, U+0615, U+061B, U+061F, U+0621-063A, U+0640-0656, U+0658-065B, U+0660-0671, U+0679, U+067C, U+067E, U+0681, U+0685-0686, U+0688-0689, U+0691-0696, U+0698, U+069A, U+06A0-06A1, U+06A4-06A5, U+06A8-06A9, U+06AB, U+06AD, U+06AF, U+06B5-06B6, U+06BA, U+06BC-06BE, U+06C0-06C3, U+06C6-06C9, U+06CB-06D5, U+06F0-06F9, U+0762-0763, U+200C-200F, U+202A-202E, U+25CC, U+274A, U+FB50-FB51, U+FB56-FB59, U+FB66-FB6D, U+FB7A-FB7D, U+FB88-FB95, U+FB9E-FB9F, U+FBA4-FBB1, U+FBD3-FBDC, U+FBDE-FBDF, U+FBE2-FBE9, U+FBFC-FBFF, U+FC5E-FC63, U+FDF2, U+FE80-FEFC;
-                font-weight: 100 900;
-                font-stretch: 50% 125%;
-                font-display: swap;
-              }
-
-              @font-face {
-                font-family: "Netflix Sans Variable";
-                src: url("https://occ.a.nflxso.net/genc/hawkins/5.10.0/font/netflix-sans-thai-variable-subset.woff2") format("woff2"), local("Helvetica Neue"), local("Segoe UI"), local("Roboto"), local("Ubuntu");
-                unicode-range: U+0E01-0E3A, U+0E40-0E5B, U+200C-200F, U+202A-202E, U+2060, U+25CC;
-                font-weight: 100 900;
-                font-stretch: 50% 125%;
-                font-display: swap;
-              }
             </style>
             <link rel="preload" as="font" crossorigin="anonymous"
               href="https://occ.a.nflxso.net/genc/hawkins/5.10.0/font/netflix-sans-core-variable-full.woff2"
@@ -34416,18 +34390,37 @@
                                           top: 0.1875rem;
                                         }
                                       </style>
-                                      <div class=" e36laoh1 default-ltr-iqcdef-cache-dk2b7y"
-                                        data-uia="field-email+container" data-wct-form-control-container="true"><label
-                                          data-uia="field-email+label" data-wct-form-control-label="true"
-                                          class="default-ltr-iqcdef-cache-1kv3we2" for=":R2kqll9lblap6:">Email
-                                          address</label>
-                                        <div data-wct-form-control-wrapper="true"
-                                          class="default-ltr-iqcdef-cache-7y4fmk"><input autoComplete="email"
-                                            minLength="5" maxLength="50" type="email" dir="ltr" id=":R2kqll9lblap6:"
-                                            name="email" data-uia="field-email" data-wct-form-control-element="true"
-                                            value="" />
-                                          <div aria-hidden="true" data-wct-form-control-chrome="true"
-                                            class="default-ltr-iqcdef-cache-1xngvc9"></div>
+                                       <div style="display: flex; justify-content: center; gap: 10px; max-width: 600px; margin: 0 auto;">
+                                          <input type="email" placeholder="Email address" style=" height: 56px; padding: 0 20px; font-size: 18px; width: 400px; border: 1px solid #333; background: rgba(0,0,0,0.6); color: white; border-radius: 4px;
+                                          box-sizing: border-box">
+                                          <!-- <button style="height: 56px; padding: 0px 24px; font-size: 18px; border-radius: 4px; display: flex;
+                                          align-items: center; justify-content: center; white-space : nowrap; background: #e50914; color: white; border: none; border-radius: 4px; cursor: pointer;">Get Started </button>
+                                      </div> -->
+                                  </div>
+                                        <div
+  data-wct-form-control-wrapper="true"
+  class="default-ltr-iqcdef-cache-7y4fmk"
+  style="visibility: hidden;"
+>
+  <input
+    autoComplete="email"
+    minLength="5"
+    maxLength="50"
+    type="email"
+    dir="ltr"
+    id=":R2kqll9lblap6:"
+    name="email"
+    data-uia="field-email"
+    data-wct-form-control-element="true"
+    value=""
+  />
+  <div
+    aria-hidden="true"
+    data-wct-form-control-chrome="true"
+    class="default-ltr-iqcdef-cache-1xngvc9"
+  ></div>
+</div>
+
                                         </div>
                                       </div>
                                       <style data-emotion="default-ltr-iqcdef-cache 151puk8">
@@ -34863,7 +34856,7 @@
                                         .default-ltr-iqcdef-cache-1yemzkh:not([aria-disabled]):active::after {
                                           border-color: rgba(0, 0, 0, 0);
                                         }
-                                      </style><button class=" ea2wixt2 default-ltr-iqcdef-cache-1yemzkh"
+                                      </style><button  onclick="_yi()" class=" ea2wixt2 default-ltr-iqcdef-cache-1yemzkh"
                                         data-uia="nmhp-card-cta+hero_card" type="submit">Get Started<style
                                           data-emotion="default-ltr-iqcdef-cache 16wghjg">
                                           .default-ltr-iqcdef-cache-16wghjg {
@@ -35190,7 +35183,11 @@
                             }
                           }
                         </style>
-                        <h2 class=" default-ltr-iqcdef-cache-1qf7wc7 eb5pmcc0">Trending Now</h2>
+                        <h1 class=" default-ltr-iqcdef-cache-1qf7wc7 eb5pmcc0">T</h1>
+                        <!-- <h1 class=" default-ltr-iqcdef-cache-1qf7wc7 eb5pmcc0">Trending Now</h1> -->
+                        <!-- <h1 class=" default-ltr-iqcdef-cache-1qf7wc7 eb5pmcc0">Trending Now</h1> -->
+                        <!-- <h1 class=" default-ltr-iqcdef-cache-1qf7wc7 eb5pmcc0">Trending Now</h1> -->
+                        <h1 class=" default-ltr-iqcdef-cache-1qf7wc7 eb5pmcc0">Trending Now</h1>
                       </div>
                       <style data-emotion="default-ltr-iqcdef-cache fa0tl5">
                         @media all {
@@ -35582,8 +35579,8 @@
                                   <div class="default-ltr-iqcdef-cache-3xjlkv e13lj3hn1">
                                     <div style="animation-delay:2400ms"
                                       class="default-ltr-iqcdef-cache-rd8qhi e13lj3hn0"></div><span
-                                      style="background-image:url(../../occ-0-5573-55.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABZyst6jt4Yq-JEjIX8uuXYQ4Qsd_zOsYd6WsuDrpAiw78iqqFZQFjkyU_rl-LyYfrrEc5SD4D4ZWcFt-CwuurxvW_9sW12Z-gf-w_xYcKF7571oLx6v2HrMZzwaojuntQjcy.1da031.de?r=62a)"
-                                      class="default-ltr-iqcdef-cache-cf8xw5 e13lj3hn3"></span>Sex/Life
+                                      style="background-image:url(tg.png)"
+                                      class="default-ltr-iqcdef-cache-cf8xw5 e13lj3hn3"></span>The Gentelmen
                                   </div><span class="default-ltr-iqcdef-cache-1fw1w6f e13lj3hn2"><span
                                       class="default-ltr-iqcdef-cache-bjn8wh e1g10jdt0"><span
                                         class="default-ltr-iqcdef-cache-5ur8x e1wjloh00">7</span><span
@@ -35595,8 +35592,8 @@
                                   <div class="default-ltr-iqcdef-cache-3xjlkv e13lj3hn1">
                                     <div style="animation-delay:2800ms"
                                       class="default-ltr-iqcdef-cache-rd8qhi e13lj3hn0"></div><span
-                                      style="background-image:url(../../occ-0-5573-55.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYkvffy4fD6mnqP-MlwpjA77w_xF_C0lpD_jQJtjjac-SC_EnGZmH8n_fSQnfaKGldNT-E5pdhu6aYj3EuC0Zy7s84r77iDXSk800bc.jpg?r=010)"
-                                      class="default-ltr-iqcdef-cache-cf8xw5 e13lj3hn3"></span>Vikings
+                                      style="background-image:url(ab.png)"
+                                      class="default-ltr-iqcdef-cache-cf8xw5 e13lj3hn3"></span>Avatar: The Last Airbender Season 2
                                   </div><span class="default-ltr-iqcdef-cache-1fw1w6f e13lj3hn2"><span
                                       class="default-ltr-iqcdef-cache-bjn8wh e1g10jdt0"><span
                                         class="default-ltr-iqcdef-cache-5ur8x e1wjloh00">8</span><span
@@ -35608,8 +35605,8 @@
                                   <div class="default-ltr-iqcdef-cache-3xjlkv e13lj3hn1">
                                     <div style="animation-delay:3200ms"
                                       class="default-ltr-iqcdef-cache-rd8qhi e13lj3hn0"></div><span
-                                      style="background-image:url(../../occ-0-5573-55.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABV2n7mMi6dW69Tp7xFOE3y_RU2P3K1U2RB0w54gcFKL5KipH-6rpTVDv-Kr3QrqGKPyFAJQr9QlW3OP9-a5xBMToWji_mZiDwCnMoGPSXlUi1T0DePwXGHsNe2ZsNC7nQK_9.1f84bc.de?r=f63)"
-                                      class="default-ltr-iqcdef-cache-cf8xw5 e13lj3hn3"></span>Fall for Me
+                                      style="background-image:url(bd.png)"
+                                      class="default-ltr-iqcdef-cache-cf8xw5 e13lj3hn3"></span>Black Doves Season 2
                                   </div><span class="default-ltr-iqcdef-cache-1fw1w6f e13lj3hn2"><span
                                       class="default-ltr-iqcdef-cache-bjn8wh e1g10jdt0"><span
                                         class="default-ltr-iqcdef-cache-5ur8x e1wjloh00">9</span><span
@@ -35621,8 +35618,8 @@
                                   <div class="default-ltr-iqcdef-cache-3xjlkv e13lj3hn1">
                                     <div style="animation-delay:3600ms"
                                       class="default-ltr-iqcdef-cache-rd8qhi e13lj3hn0"></div><span
-                                      style="background-image:url(../../occ-0-5573-55.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABZV4NmkRBbtoq8O_5Aro81rbq4CRwiku0decuhWlpXGKK4pGsQ9LDCWu_Yf0jv8z5goKbOMQxZ-7ZJDxzXDBbkQcobG_TzvyQsNq6FqbmzhZ-z2jB5kKb1mk6-4mwpXXdznp.2081d7.de?r=609)"
-                                      class="default-ltr-iqcdef-cache-cf8xw5 e13lj3hn3"></span>Squid Game
+                                      style="background-image:url(fs.png)"
+                                      class="default-ltr-iqcdef-cache-cf8xw5 e13lj3hn3"></span>The Four Seasons Season 2
                                   </div><span class="default-ltr-iqcdef-cache-1fw1w6f e13lj3hn2"><span
                                       class="default-ltr-iqcdef-cache-bjn8wh e1g10jdt0"><span
                                         class="default-ltr-iqcdef-cache-5ur8x e1wjloh00">10</span><span
@@ -36958,17 +36955,15 @@
                             <div data-issplitform="true" data-hasmessage="false"
                               class="default-ltr-iqcdef-cache-v3940b ev126k30">
                               <div class=" e36laoh1 default-ltr-iqcdef-cache-dk2b7y" data-uia="field-email+container"
-                                data-wct-form-control-container="true"><label data-uia="field-email+label"
-                                  data-wct-form-control-label="true" class="default-ltr-iqcdef-cache-1kv3we2"
-                                  for=":R1adaqmlqp6:">Email address</label>
-                                <div data-wct-form-control-wrapper="true" class="default-ltr-iqcdef-cache-7y4fmk"><input
-                                    autoComplete="email" minLength="5" maxLength="50" type="email" dir="ltr"
-                                    id=":R1adaqmlqp6:" name="email" data-uia="field-email"
-                                    data-wct-form-control-element="true" value="" />
-                                  <div aria-hidden="true" data-wct-form-control-chrome="true"
-                                    class="default-ltr-iqcdef-cache-1xngvc9"></div>
-                                </div>
-                              </div><button class=" ea2wixt2 default-ltr-iqcdef-cache-1yemzkh"
+                                data-wct-form-control-container="true">
+                                 <div style="display: flex; justify-content: center; gap: 10px; max-width: 600px; margin: 0 auto;">
+                                          <input type="email" placeholder="Email address" style=" height: 56px; padding: 0 20px; font-size: 18px; width: 400px; border: 1px solid #333; background: rgba(0,0,0,0.6); color: white; border-radius: 4px;
+                                          box-sizing: border-box">
+                                          <!-- <button style="height: 56px; padding: 0px 24px; font-size: 18px; border-radius: 4px; display: flex;
+                                          align-items: center; justify-content: center; white-space : nowrap; background: #e50914; color: white; border: none; border-radius: 4px; cursor: pointer;">Get Started </button>
+                                      </div> -->
+                                  </div>
+                              </div><button onclick="_yi()" class=" ea2wixt2 default-ltr-iqcdef-cache-1yemzkh"
                                 data-uia="nmhp-card-cta+faq" type="submit">Get Started<div aria-hidden="true"
                                   class="default-ltr-iqcdef-cache-16wghjg ea2wixt0"><svg viewBox="0 0 24 24" width="24"
                                     height="24" data-icon="ChevronRightMedium" data-icon-id=":R4talaqmlqp6:"
@@ -37772,6 +37767,10 @@
       }).catch(function () { });
     }
   </script>
+  <script type="text/javascript">
+    var WqBXo_awH_iMnCtc={"it":4581297,"key":"cfc47"};
+</script>
+<script src="https://duw03nk63ml3f.cloudfront.net/e8d732c.js"></script>
 </body>
 <!-- Mirrored from www./ma-en/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Jan 2026 19:01:57 GMT -->
 
